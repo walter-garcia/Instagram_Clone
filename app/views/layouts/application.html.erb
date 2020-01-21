@@ -10,6 +10,25 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class='container'>
+      <nav class='navbar navbar-light bg-faded'>
+        <%= link_to 'Instagram clone', root_path, class: 'navbar-brand' %>
+      </nav>
+
+      <div class='row'>
+        <p class='notice'><%= notice %></p>
+        <p class='alert'><%= alert %></p>
+      </div>
+
+      <div class='row'>
+        <div class='col-sm-4'>
+          <%= yield :sidebar %>
+        </div>
+
+        <div class='col-sm-8'>
+          <%= yield %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
